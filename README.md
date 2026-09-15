@@ -90,16 +90,10 @@ O plano de desenvolvimento do **PulseVida** inclui:
 
 Desenvolvido com empenho por:
 
-* 👨‍💻 **Daniel Monteiro de Oliveira**
 * 👨‍💻 **Esequias Ferraz de Andrade**
-* 👨‍💻 **Fabricio Luiz Silva de Oliveira**
 * 👨‍💻 **Gabriel Macedo Guimarães**
-* 👨‍💻 **Marcus Vinicius Alves de Oliveira**
-* 👨‍💻 **Nicholas Eduardo Pereira Sobrinho**
-* 👨‍💻 **Phablo Correa Ferreira**
-* 👨‍💻 **Ricardo da Silva Neves**
 * 👨‍💻 **Thiago Marsol Almeida Baiao**
-* 👨‍💻 **Thiago Penetra Cunha de Melo**
+
 
 ---
 
