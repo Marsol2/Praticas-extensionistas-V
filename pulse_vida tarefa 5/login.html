@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="Css/login.css">
+
+<title>Login</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">
+    <img src="imagens/logo_pulsevida.png" alt="PulseVida">
+  </a>
+</header>
+
+<!-- LOGIN -->
+<div class="login-wrapper">
+
+  <div class="login-container">
+
+    <img src="imagens/logo_pulsevida.png" class="logo-login">
+
+    <h2>Login</h2>
+
+    <form id="formLogin">
+      <input type="text" id="usuario" placeholder="Usuário" required>
+      <input type="password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <p>Não tem conta? <a href="tela_cadastro.html">Cadastrar</a></p>
+    </form>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-contato">
+      <h3>Para mais informações</h3>
+      <p>Entre em contato com a nossa equipe</p>
+
+      <p class="whatsapp">
+        <img src="icons/whatsapp.png">
+        (22) 99204-9923
+      </p>
+
+      <p class="email">
+        <img src="icons/email.png">
+        alves5227@gmail.com
+      </p>
+    </div>
+
+    <div class="footer-centro">
+      <img src="imagens/logo_saquarema.avif">
+      <p>Prefeitura de Saquarema| R. Cel. Madureira, 77 - Centro, Saquarema - RJ</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<script>
+document.getElementById("formLogin").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const usuario = document.getElementById("usuario").value;
+
+  localStorage.setItem("logado", "true");
+  localStorage.setItem("usuario", usuario);
+
+  alert("Login realizado!");
+  window.location.href = "dashboard.html";
+});
+</script>
+<script src="app.js"></script>
+<button id="btn-subscribe">Ativar notificações</button>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="Css/global.css">
+  <link rel="stylesheet" href="Css/style.css">
+
+  <title>Pulse Vida</title>
+</head>
+
+<body>
+
+<header>
+  <a class="pulse" href="index.html"><h1>PulseVida ❤️</h1></a>
+
+  <nav>
+    <a id="Login" href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="slider">
+
+  <button class="seta esquerda" onclick="mudarSlide(-1)">⬅</button>
+
+  <div class="slide ativo">
+    <h2>PulseVida: Cuidando da sua saúde</h2>
+    <p>Um aplicativo desenvolvido para auxiliar no monitoramento da pressão arterial, facilitando o acompanhamento da saúde hipertensa.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Saúde em Saquarema</h2>
+    <p>Muitas pessoas enfrentam dificuldades para monitorar sua pressão e acessar atendimento rápido. O PulseVida busca resolver isso.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Como o PulseVida ajuda</h2>
+    <p>Com registro de pressão, localização de hospitais e pedidos de ajuda, o app melhora o atendimento.</p>
+  </div>
+
+  <button class="seta direita" onclick="mudarSlide(1)">➡</button>
+
+</section>
+
+<script>
+let slideAtual = 0;
+const slides = document.querySelectorAll(".slide");
+
+function mostrarSlide(index) {
+  slides.forEach(s => s.classList.remove("ativo"));
+  slides[index].classList.add("ativo");
+}
+
+function mudarSlide(direcao) {
+  slideAtual += direcao;
+
+  if (slideAtual < 0) slideAtual = slides.length - 1;
+  if (slideAtual >= slides.length) slideAtual = 0;
+
+  mostrarSlide(slideAtual);
+}
+
+// inicia
+mostrarSlide(slideAtual);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta nome="viewport" conteúdo="largura=largura-dispositivo, escala-inicial=1.0">
+<link rel="stylesheet" href="Css/aba_c.css">
+<title>Agendamento</title>
+</head>
+
+<body>
+<script>
+if (localStorage.getItem("logado") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
+<header>
+  <a class="pulse"  href="index.html" > <h1>  PulseVida ❤️</h1> </a>
+    <nav>
+      <a href="aba_a.html" >Solicitar</a>
+      <a href="aba_b.html" >Solicitações</a>
+      <a href="aba_c.html" >Agendamento</a>
+      <a href="aba_d.html" >Recomendações</a>
+    </nav>
+ 
+</header>
+
+<h1 class="titulo">Agendamento</h1>
+
+<div class="textos">
+
+<form>
+  <input type="text" placeholder="Nome"><br><br>
+  <input type="date"><br><br>
+  <input type="time"><br><br>
+  <button>Agendar</button>
+</form>
+
+</div>
+
+</body>
+</html>

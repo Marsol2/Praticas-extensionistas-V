@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta nome="viewport" conteúdo="largura=largura-dispositivo, escala-inicial=1.0">
+<link rel="stylesheet" href="css/aba_b.css">
+<title>Solicitações</title>
+</head>
+
+<body>
+  <script>
+if (localStorage.getItem("logado") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
+
+<header>
+  <a class="pulse"  href="index.html" > <h1>  PulseVida ❤️</h1> </a>
+    <nav>
+      <a href="aba_a.html" >Solicitar</a>
+      <a href="aba_b.html" >Solicitações</a>
+      <a href="aba_c.html" >Agendamento</a>
+      <a href="aba_d.html" >Recomendações</a>
+    </nav>
+ 
+</header>
+
+<h1 class="titulo"> Solicitações em andamento</h1>
+
+<div class="textos">
+<ul id="listaSolicitacoes"></ul>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  let lista = JSON.parse(localStorage.getItem("solicitacoes")) || [];
+  let ul = document.getElementById("listaSolicitacoes");
+
+  function renderizar() {
+    ul.innerHTML = "";
+
+    if (lista.length === 0) {
+      ul.innerHTML = "<li>Nenhuma solicitação encontrada</li>";
+      return;
+    }
+
+    lista.forEach((s, index) => {
+
+      let li = document.createElement("li");
+
+
+      let pressaoFormatada = "-";
+
+     if (s.pressao) {
+     let partes = s.pressao.split("/");
+
+     if (partes.length === 2) {
+     let sistolica = parseInt(partes[0]);
+     let diastolica = parseInt(partes[1]);
+     pressaoFormatada = `${sistolica}/${diastolica} mmHg`;
+     }
+       }
+
+      li.innerHTML = `
+      <div class="card">
+    <p><strong>Nome:</strong> ${s.nome || "-"}</p>
+    <p><strong>Idade:</strong> ${s.idade || "-"}</p>
+    <p><strong>Pressão:</strong> ${pressaoFormatada || "-"}</p>
+    <p><strong>Endereço:</strong> ${s.rua || "-"}, ${s.numero || "-"} - ${s.bairro || "-"}, ${s.cidade || "-"}</p>
+    <p><strong>Problema:</strong> ${s.problema || "-"}</p>
+    <button onclick="excluir(${index})">❌ Excluir</button>
+    </div>
+     `    ;
+
+      ul.appendChild(li);
+    });
+  }
+
+  window.excluir = function(index) {
+    if (confirm("Deseja excluir esta solicitação?")) {
+      lista.splice(index, 1);
+      localStorage.setItem("solicitacoes", JSON.stringify(lista));
+      renderizar();
+    }
+  }
+
+  renderizar();
+
+});
+</script>
+</script>
+</script>
+
+</body>
+</html>

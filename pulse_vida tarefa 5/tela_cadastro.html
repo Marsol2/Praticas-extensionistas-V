@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Cadastro.css">
+    <title>Cadastro</title>
+
+</head>
+<body>
+    <div class="cadastro-container">
+        <h2>Criar Conta</h2>
+        
+        <form action="cadastro.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuário" required>
+            <input type="email" name="Email" placeholder="Email" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="text" name="CPF" placeholder="CPF" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" oninput="formatarCPF(this)"  title="O número do CPF deve ter 11 dígitos" required>
+            <input type="text" name="Sus" placeholder="Número do SUS" maxlength="15" oninput="formatarSUS(this)" pattern="\d{15}" title="O número do SUS deve ter 15 dígitos" required>		    
+            <button type="submit" > Cadastrar </button>
+        </form>
+
+
+
+
+<script>
+    function formatarSUS(campo) {
+    let valor = campo.value.replace(/\D/g, "");
+
+    // Limita a 15 dígitos
+    valor = valor.substring(0, 15);
+
+    campo.value = valor;
+    }
+</script>
+
+<script>
+    function formatarCPF(campo) {
+    let valor = campo.value;
+
+    // Remove tudo que não for número
+    valor = valor.replace(/\D/g, "");
+
+    // Limita a 11 números
+    valor = valor.substring(0, 11);
+
+    // Aplica a máscara
+    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+    campo.value = valor;
+    }
+</script>
+</script>
+    </div>
+</body>
+</html>
