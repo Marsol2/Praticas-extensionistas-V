@@ -146,7 +146,7 @@ Plataforma web acadêmica responsiva para monitoramento de pacientes e gestão d
 * **Banco de Dados (MySQL Cloud):** Persistência relacional em nuvem gerenciando usuários, agendamentos e métricas.
 =======
 * **Frontend Estático (Netlify):** 
-# (praticas-extensionistas-v.vercel.app) 
+# 🔗 **Aplicação online (Vercel):** [Acessar PulseVida na Vercel — praticas-extensionistas-v.vercel.app](https://praticas-extensionistas-v.vercel.app)
 * **Backend API (Vercel):** Hospedagem serverless dedicada para os serviços Express e rotas do sistema.
 * **Banco de Dados (MySQL TiDBSCloud):**
 =========
