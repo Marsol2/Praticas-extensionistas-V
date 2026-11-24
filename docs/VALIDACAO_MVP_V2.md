@@ -40,20 +40,27 @@ Canal de coleta rápida de percepções de uso composto por quatro campos gravad
 
 Registros conferidos na instância **TiDB Cloud** (`pulsevida`):
 
-| ID | Nome | Usuário | E-mail | Perfil (`tipo`) | Ativo | Criado em |
-| :--- | :--- | :--- | :--- | :--- | :---: | :--- |
-| `1` | Dado Dollabela | `dado` | `dado@gmail.com` | `paciente` | 1 | 2026-11-20 16:56:31 |
-| `2` | Admin | `admin` | `admin@admin.com` | `administrador` | 1 | 2026-11-20 16:58:39 |
-| `30001` | Dr. Pedro Paulo | `pedro` | `pedro@gmail.com` | `medico` | 1 | 2026-11-20 17:09:24 |
-| `2030001` | Neto Caneco | `caneco` | `caneco@gmail.com` | `paciente` | 1 | 2026-11-21 01:41:18 |
-| `2060001` | Neco Boneco Doido | `neco` | `neco@gmail.com` | `paciente` | 1 | 2026-11-21 14:44:54 |
-| `2090001` | admin | `zeca` | `zeca@gmail.com` | `paciente` | 1 | 2026-11-21 15:21:52 |
-| `2090004` | Carlos Magno | `carlos` | `carlos@gmail.com` | `paciente` | 1 | 2026-11-21 15:29:21 |
-| `2120001` | Mara Maravilha | `mara` | `mara@gmail.com` | `paciente` | 1 | 2026-11-21 19:08:12 |
-| `2120002` | Mané Garrincha | `garrincha` | `garrincha@gmail.com` | `paciente` | 1 | 2026-11-21 19:12:54 |
-| `2150001` | Dra. Simone Almeida Couto | `almeida` | `almeida@gmail.com` | `medico` | 1 | 2026-11-22 14:34:05 |
-| `2180002` | Dr. Mario Sergio | `mario` | `mario@gmail.com` | `medico` | 1 | 2026-11-22 15:48:12 |
-| `2180004` | Jose Carlos | `jose` | `jose@gmail.com` | `paciente` | 1 | 2026-11-22 15:51:00 |
+mysql> SELECT id, nome, usuario, tipo, especialidade, crm, ativo, criado_em
+    ->     FROM usuarios
+    ->     ORDER BY id;
++---------+---------------------------+-----------+---------------+--------------------------+---------------+-------+---------------------+
+| id      | nome                      | usuario   | tipo          | especialidade            | crm           | ativo | criado_em           |
++---------+---------------------------+-----------+---------------+--------------------------+---------------+-------+---------------------+
+|       1 | Dado  Dollabela           | dado      | paciente      | NULL                     | NULL          |     1 | 2026-11-20 16:56:31 |
+|       2 | Admin                     | admin     | administrador | NULL                     | NULL          |     1 | 2026-11-20 16:58:39 |
+|   30001 | Dr. Pedro Paulo           | pedro     | medico        | Cl├¡nica Geral           | CRM-RJ 530112 |     1 | 2026-11-20 17:09:24 |
+| 2030001 | Neto Caneco               | caneco    | paciente      | NULL                     | NULL          |     1 | 2026-11-21 01:41:18 |
+| 2060001 | Neco Boneco Doido         | neco      | paciente      | NULL                     | NULL          |     1 | 2026-11-21 14:44:54 |
+| 2090001 | admin                     | zeca      | paciente      | NULL                     | NULL          |     1 | 2026-11-21 15:21:52 |
+| 2090004 | Carlos Magno              | carlos    | paciente      | NULL                     | NULL          |     1 | 2026-11-21 15:29:21 |
+| 2120001 | Mara Maravilha            | mara      | paciente      | NULL                     | NULL          |     1 | 2026-11-21 19:08:12 |
+| 2120002 | Man├® Garrincha           | garrincha | paciente      | NULL                     | NULL          |     1 | 2026-11-21 19:12:54 |
+| 2150001 | Dra. Simone Almeida Couto | almeida   | medico        | Cl├¡nica Geral           | CRM-RJ 530420 |     1 | 2026-11-22 14:34:05 |
+| 2180002 | Dr. Mario Sergio          | mario     | medico        | Cirurgi├úo Cardiologista | 4321          |     1 | 2026-11-22 15:48:12 |
+| 2180004 | Jose Carlos               | jose      | paciente      | NULL                     | NULL          |     1 | 2026-11-22 15:51:00 |
++---------+---------------------------+-----------+---------------+--------------------------+---------------+-------+---------------------+
+12 rows in set (0.02 sec)
+
 
 ---
 
