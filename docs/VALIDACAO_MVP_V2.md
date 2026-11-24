@@ -66,15 +66,7 @@ mysql> SELECT id, nome, usuario, tipo, especialidade, crm, ativo, criado_em
 
 ## 3. Feedbacks Reais Registrados no Banco (`pesquisas`)
 
-Consulta executada via `SELECT * FROM pesquisas;` na base `pulsevida` (**TiDB Cloud**):
 
-| ID | Identificação (`nome`) | O que funcionou bem (`positivo`) | Dificuldade encontrada (`negativo`) | Sugestões (`sugestoes`) | Criado em |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `1` | Sandro Carvalho de Souza | Melho agilidade para Agendamentos, bem pratico. | Achar disponibilidade de atendimento , em situação que exigira rapidez no atendimento do Paciente Hipertenso. | Mais rapidez no atendimento em caso de prioridade, risco de vida. | 2026-11-22 14:06:49 |
-| `2000001` | Sandra Barbosa (Paciente) | O acesso à plataforma ficou mais rápido e direto, e o fluxo de login até o acompanhamento da fila de atendimento funcionou sem travar. | No começo, tive dúvida sobre qual rota abrir depois de entrar, porque vi referências a áreas separadas para atendimento e gestão. | Deixar um aviso curto na tela inicial explicando o que cada área faz para quem usa pelo celular. | 2026-11-23 21:50:28 |
-| `2000002` | Carlos Roberto (médico) | O portal médico (`portal_medico`) deixou a visualização da fila e o registro de atendimentos bem mais organizados e fáceis de consultar no dia a dia. | Em alguns momentos, ao atualizar a tela durante os testes, precisei conferir se a sessão continuava ativa antes de enviar uma nova alteração. | Exibir um indicador discreto de conexão/sincronização no topo do portal médico para dar mais segurança durante o atendimento. | 2026-11-23 21:52:12 |
-| `2000003` | Ronaldo Pietro(estudante) | A estrutura da pesquisa é limpa, objetiva e deixa claro logo no início para não colocar dados sensíveis, o que passa confiança logo no primeiro | Como o formulário tem campos de texto livre, quem testa rápido na apresentação pode preencher respostas curtas demais se não houver exemplos. | Manter os placeholders atuais e adicionar um exemplo rápido em "Que dificuldade encontrou?" para orientar quem responde em | 2026-11-23 21:55:14 |
-| `2000004` | Celia Machado(Enfermeira) | A separação entre a área médica e o acompanhamento do fluxo facilitou enxergar como os atendimentos avançam sem misturar telas administrativas. | Na rotina de triagem e encaminhamento, faltou perceber rapidamente quando um registro já tinha sido atualizado por outro perfil durante os testes. | Incluir um aviso visual discreto de atualização recente e destacar os atalhos principais para quem acompanha a fila no dia a dia. | 2026-11-23 21:57:17 |
 
 ---
 
